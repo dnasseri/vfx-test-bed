@@ -515,7 +515,7 @@ VisualEffect:
       - m_Value: 5
         m_Name: Tube Radius
         m_Overridden: 1
-      - m_Value: 0.2612518
+      - m_Value: 0
         m_Name: Bloom
         m_Overridden: 1
     m_Vector2f:
@@ -917,7 +917,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 1
+      - m_Value: 0
         m_Name: Spawn Rate
         m_Overridden: 1
     m_Vector2f:
@@ -1198,6 +1198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123447382}
+  - component: {fileID: 1123447383}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -1213,7 +1214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123447381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3486078, y: -0.25430515, z: -1.0150473}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440195999}
@@ -1221,6 +1222,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1123447383
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123447381}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1373526718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969477742}
   - component: {fileID: 1969477741}
+  - component: {fileID: 1969477743}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -1567,7 +1588,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: f8af5b9bfc0679c49923146d8f376df8, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -1579,6 +1600,12 @@ PlayableDirector:
     value: {fileID: 486494839}
   - key: {fileID: -3712888970995337208, guid: f8af5b9bfc0679c49923146d8f376df8, type: 2}
     value: {fileID: 676517282}
+  - key: {fileID: -3316765449544282947, guid: f8af5b9bfc0679c49923146d8f376df8, type: 2}
+    value: {fileID: 1969477740}
+  - key: {fileID: 2303756834960472523, guid: f8af5b9bfc0679c49923146d8f376df8, type: 2}
+    value: {fileID: 1123447383}
+  - key: {fileID: -8645759019382401997, guid: f8af5b9bfc0679c49923146d8f376df8, type: 2}
+    value: {fileID: 1522020333}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1969477742
@@ -1595,3 +1622,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1969477743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969477740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a37806af980e1a74c934dea7b8eae9c8, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 427918027}
+          m_TargetAssemblyTypeName: UnityEngine.VFX.VisualEffect, UnityEngine
+          m_MethodName: SendEvent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Kick
+            m_BoolArgument: 0
+          m_CallState: 1
